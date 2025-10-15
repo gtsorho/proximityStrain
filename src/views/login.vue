@@ -61,35 +61,36 @@
            class="text-blue-700 underline hover:text-blue-900">Read More →</a>
       </div>
 
-      <!-- Card 3 -->
-      <div class="bg-white/60 lg:order-3 lg:row-span-2 2xl:row-span-1 lg:col-span-2 rounded-lg shadow-xl mb-5 lg:mb-0 p-8 text-left backdrop-blur-sm">
-        <h1 class="text-gray-900 text-xl font-bold mb-1">Strategies Beyond Enforcement</h1>
-        <p class="text-xs text-gray-600 mb-4 italic">
-          Source: <a href="https://www.modernghana.com/news/1440180/beyond-enforcement-tackling-galamsey-in-ghana.html" target="_blank" class="underline text-blue-700 hover:text-blue-900">Modern Ghana (2025)</a>
-        </p>
-        <p class="text-gray-800 leading-relaxed mb-4">
-          Enforcement alone won’t solve galamsey. Proposals include community-based mining cooperatives, blockchain tracking systems, 
-          and environmental bonds to rehabilitate mined lands while ensuring transparency.
-        </p>
-        <a href="https://www.modernghana.com/news/1440180/beyond-enforcement-tackling-galamsey-in-ghana.html" 
-           target="_blank" 
-           class="text-blue-700 underline hover:text-blue-900">Read More →</a>
-      </div>
+    
+ <!-- Card 3 -->
+     <!-- <div class="bg-white/60 lg:order-3 lg:row-span-2 2xl:row-span-1 lg:col-span-2 rounded-lg shadow-xl mb-5 lg:mb-0 p-8 text-left backdrop-blur-sm">
+       <h1 class="text-gray-900 text-xl font-bold mb-1">Strategies Beyond Enforcement</h1>
+       <p class="text-xs text-gray-600 mb-4 italic">
+         Source: <a href="https://www.modernghana.com/news/1440180/beyond-enforcement-tackling-galamsey-in-ghana.html" target="_blank" class="underline text-blue-700 hover:text-blue-900">Modern Ghana (2025)</a>
+       </p>
+       <p class="text-gray-800 leading-relaxed mb-4">
+         Enforcement alone won’t solve galamsey. Proposals include community-based mining cooperatives, blockchain tracking systems, 
+         and environmental bonds to rehabilitate mined lands while ensuring transparency.
+       </p>
+       <a href="https://www.modernghana.com/news/1440180/beyond-enforcement-tackling-galamsey-in-ghana.html" 
+          target="_blank" 
+          class="text-blue-700 underline hover:text-blue-900">Read More →</a>
+     </div> -->
 
-      <!-- Card 4 -->
-      <div class="bg-white/60 lg:order-4 lg:row-span-2 2xl:row-span-1 col-span-2 rounded-lg shadow-xl mb-5 lg:mb-0 p-8 text-left backdrop-blur-sm">
-        <h1 class="text-gray-900 text-xl font-semibold mb-1">Calls for License Revocations</h1>
-        <p class="text-xs text-gray-600 mb-4 italic">
-          Source: <a href="https://www.adomonline.com/galamsey-revoke-licenses-of-politically-exposed-persons-involved-tuc-to-govt/" target="_blank" class="underline text-blue-700 hover:text-blue-900">Adom Online (2025)</a>
-        </p>
-        <p class="text-gray-800 leading-relaxed mb-4">
-          Ghana’s Trade Union Congress (TUC) urged government to revoke licenses of politically exposed persons involved in illegal mining, 
-          citing deep-rooted corruption as a barrier to sustainable enforcement.
-        </p>
-        <a href="https://www.adomonline.com/galamsey-revoke-licenses-of-politically-exposed-persons-involved-tuc-to-govt/" 
-           target="_blank" 
-           class="text-blue-700 underline hover:text-blue-900">Read More →</a>
-      </div>
+     <!-- Card 4 -->
+     <!-- <div class="bg-white/60 lg:order-4 lg:row-span-2 2xl:row-span-1 col-span-2 rounded-lg shadow-xl mb-5 lg:mb-0 p-8 text-left backdrop-blur-sm">
+       <h1 class="text-gray-900 text-xl font-semibold mb-1">Calls for License Revocations</h1>
+       <p class="text-xs text-gray-600 mb-4 italic">
+         Source: <a href="https://www.adomonline.com/galamsey-revoke-licenses-of-politically-exposed-persons-involved-tuc-to-govt/" target="_blank" class="underline text-blue-700 hover:text-blue-900">Adom Online (2025)</a>
+       </p>
+       <p class="text-gray-800 leading-relaxed mb-4">
+         Ghana’s Trade Union Congress (TUC) urged government to revoke licenses of politically exposed persons involved in illegal mining, 
+         citing deep-rooted corruption as a barrier to sustainable enforcement.
+       </p>
+       <a href="https://www.adomonline.com/galamsey-revoke-licenses-of-politically-exposed-persons-involved-tuc-to-govt/" 
+          target="_blank" 
+          class="text-blue-700 underline hover:text-blue-900">Read More →</a>
+     </div> -->
 
     </div>
   </div>
