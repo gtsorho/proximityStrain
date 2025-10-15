@@ -1,11 +1,10 @@
 {
-  "type": "node",
-  "backend": {
-    "start": "node server.js",
-    "routes": ["/api/*"]
+  "build": {
+    "command": "npm run build",
+    "output": "dist"
   },
-  "frontend": {
-    "build": "vite build",
-    "path": "dist"
+  "run": {
+    "command": "npm start",
+    "port": 3000
   }
 }
