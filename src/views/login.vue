@@ -1,127 +1,113 @@
 <template>
-  <div>
-    <!-- component -->
-<div class="flex h-screen page" >
-  <!-- Left Pane -->
-<div class=" lg:flex items-center justify-center flex-1 text-black">
-  <div class="text-center overflow-y-auto px-6 py-2">
+  <div class="flex flex-col lg:flex-row h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white overflow-hidden">
     
-    <!-- Logo + App Name -->
-    <p class="text-start text-teal-400 text-2xl font-bold flex items-center gap-2">
-      <img src="../assets/sensor.png" alt="App Logo" class="w-10 h-10"> STRAIN
-    </p>
-
-    <!-- Header -->
-    <div class="flex flex-col items-center justify-center mb-6">
-      <h1 class="text-3xl font-bold text-white tracking-wide">Galamsey Monitoring & Tracking</h1>
-      <p class="text-white/70 text-sm mt-1 italic">Powered by Proximity Sensor Intelligence</p>
-    </div>
-
-    <!-- Intro Section -->
-    <div class="max-w-5xl mb-8 text-center mx-auto text-white">
-      <p class="text-sm lg:text-base text-white/90 leading-relaxed">
-        Illegal small-scale gold mining, known locally as <strong>galamsey</strong>, poses severe environmental, social, and economic threats to Ghana. 
-        Rivers and forest reserves face devastation as illegal miners seek gold without regulation.  
-        <br><br>
-        The <strong>Galamsey Monitoring App</strong> integrates <strong>proximity sensors</strong> and GPS-based tracking to detect and monitor 
-        illegal mining activities in real-time. It enables early detection, evidence collection, and data-driven decision-making 
-        for sustainable enforcement and environmental protection.
-      </p>
-    </div>
-
-    <!-- Grid Section -->
-    <div class="flex flex-col lg:grid text-xs lg:gap-4 2xl:gap-6 lg:grid-cols-4 2xl:row-span-2 ml-2 pt-4">
-
-      <!-- Card 1 -->
-      <div class="bg-white/60 lg:order-1 lg:row-span-1 2xl:row-span-1 lg:col-span-3 rounded-lg shadow-xl mb-5 lg:mb-0 p-8 text-left backdrop-blur-sm">
-        <h1 class="text-gray-900 text-xl font-semibold mb-1">Environmental & Economic Losses</h1>
-        <p class="text-xs text-gray-600 mb-4 italic">
-          Source: <a href="https://www.theguardian.com/world/2024/nov/25/polluted-rivers-taxes-ghana-illegal-gold-mining-boom" target="_blank" class="underline text-blue-700 hover:text-blue-900">The Guardian (2024)</a>
-        </p>
-        <p class="text-gray-800 leading-relaxed mb-4">
-          Ghana’s struggle with galamsey (illegal small-scale mining) is not only an environmental crisis but also a major economic and social threat. The country is estimated to lose over US$2 billion each year as a result of this activity — a figure that accounts for lost tax revenue, the destruction of arable farmland, and the pollution of critical water bodies that serve millions.
-        </p>
-        <a href="https://www.theguardian.com/world/2024/nov/25/polluted-rivers-taxes-ghana-illegal-gold-mining-boom" 
-           target="_blank" 
-           class="text-blue-700 underline hover:text-blue-900">Read More →</a>
+    <!-- Left Pane -->
+    <div class="flex-1 flex flex-col items-center justify-center px-6 py-10 overflow-y-auto backdrop-blur-sm">
+      <!-- Logo -->
+      <div class="flex items-center justify-start w-full max-w-5xl mb-8">
+        <img src="../assets/sensor.png" alt="App Logo" class="w-10 h-10 mr-2" />
+        <h1 class="text-2xl font-bold text-teal-400 tracking-wide">STRAIN</h1>
       </div>
 
-      <!-- Card 2 -->
-      <div class="bg-white/60 lg:order-2 lg:row-span-1 2xl:row-span-1 lg:col-span-1 rounded-lg shadow-xl mb-5 lg:mb-0 p-8 text-left backdrop-blur-sm">
-        <h1 class="text-gray-900 text-xl font-bold mb-1">Gold Price Surge & Galamsey Boom</h1>
-        <p class="text-xs text-gray-600 mb-4 italic">
-          Source: <a href="https://www.aljazeera.com/features/2025/1/22/as-gold-prices-surge-ghana-faces-looming-crisis-over-illegal-mining" target="_blank" class="underline text-blue-700 hover:text-blue-900">Al Jazeera (2025)</a>
-        </p>
-        <p class="text-gray-800 leading-relaxed mb-4">
-          As gold prices soared globally in 2024, illegal mining in Ghana surged—spreading.
-        </p>
-        <a href="https://www.aljazeera.com/features/2025/1/22/as-gold-prices-surge-ghana-faces-looming-crisis-over-illegal-mining" 
-           target="_blank" 
-           class="text-blue-700 underline hover:text-blue-900">Read More →</a>
+      <!-- Header -->
+      <div class="text-center max-w-2xl mb-6">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-2 tracking-wide">Galamsey Monitoring & Tracking</h1>
+        <p class="text-gray-300 text-sm italic">Powered by Proximity Sensor Intelligence</p>
       </div>
 
-    
- <!-- Card 3 -->
-     <!-- <div class="bg-white/60 lg:order-3 lg:row-span-2 2xl:row-span-1 lg:col-span-2 rounded-lg shadow-xl mb-5 lg:mb-0 p-8 text-left backdrop-blur-sm">
-       <h1 class="text-gray-900 text-xl font-bold mb-1">Strategies Beyond Enforcement</h1>
-       <p class="text-xs text-gray-600 mb-4 italic">
-         Source: <a href="https://www.modernghana.com/news/1440180/beyond-enforcement-tackling-galamsey-in-ghana.html" target="_blank" class="underline text-blue-700 hover:text-blue-900">Modern Ghana (2025)</a>
-       </p>
-       <p class="text-gray-800 leading-relaxed mb-4">
-         Enforcement alone won’t solve galamsey. Proposals include community-based mining cooperatives, blockchain tracking systems, 
-         and environmental bonds to rehabilitate mined lands while ensuring transparency.
-       </p>
-       <a href="https://www.modernghana.com/news/1440180/beyond-enforcement-tackling-galamsey-in-ghana.html" 
-          target="_blank" 
-          class="text-blue-700 underline hover:text-blue-900">Read More →</a>
-     </div> -->
+      <!-- Description -->
+      <div class="max-w-3xl text-center mb-10 text-gray-200 leading-relaxed text-sm md:text-base">
+        <p>
+          Illegal small-scale gold mining, known locally as 
+          <strong class="text-teal-400">galamsey</strong>, poses severe environmental, social, and economic threats to Ghana. 
+          <br /><br />
+          The <strong>Galamsey Monitoring App</strong> integrates 
+          <strong>proximity sensors</strong> and <strong>GPS-based tracking</strong> to detect and monitor illegal mining activities in real time.
+          It enables early detection, evidence collection, and data-driven decision-making for sustainable enforcement and environmental protection.
+        </p>
+      </div>
 
-     <!-- Card 4 -->
-     <!-- <div class="bg-white/60 lg:order-4 lg:row-span-2 2xl:row-span-1 col-span-2 rounded-lg shadow-xl mb-5 lg:mb-0 p-8 text-left backdrop-blur-sm">
-       <h1 class="text-gray-900 text-xl font-semibold mb-1">Calls for License Revocations</h1>
-       <p class="text-xs text-gray-600 mb-4 italic">
-         Source: <a href="https://www.adomonline.com/galamsey-revoke-licenses-of-politically-exposed-persons-involved-tuc-to-govt/" target="_blank" class="underline text-blue-700 hover:text-blue-900">Adom Online (2025)</a>
-       </p>
-       <p class="text-gray-800 leading-relaxed mb-4">
-         Ghana’s Trade Union Congress (TUC) urged government to revoke licenses of politically exposed persons involved in illegal mining, 
-         citing deep-rooted corruption as a barrier to sustainable enforcement.
-       </p>
-       <a href="https://www.adomonline.com/galamsey-revoke-licenses-of-politically-exposed-persons-involved-tuc-to-govt/" 
-          target="_blank" 
-          class="text-blue-700 underline hover:text-blue-900">Read More →</a>
-     </div> -->
+      <!-- Info Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl px-2">
 
-    </div>
-  </div>
-</div>
-
-
-
-  <!-- Right Pane -->
-  <div class="w-full  lg:w-1/3 flex items-center justify-center" style="
-       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.532), rgba(255,255,255,0.95))
-     ">
-    <div class="max-w-md w-full p-6 bg-slate-100 rounded-3 shadow-md rounded-lg">
-      <h1 class="text-3xl font-semibold mb-6 text-black text-center">Sign In</h1>
-      <form @submit.prevent="login()" class="space-y-4">
-        <div>
-          <label for="username" class="block text-sm font-light text-gray-700">Username</label>
-          <input type="text" id="username" v-model="creds.username" name="username" placeholder="johndoe" class="font-light text-gray-500 text-xs mt-1 pt-1 px-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300">
+        <!-- Card 1 -->
+        <div class="bg-white/10 hover:bg-white/20 p-6 rounded-2xl shadow-md transition duration-300 ease-in-out">
+          <h2 class="text-lg font-semibold text-teal-300 mb-1">Environmental & Economic Losses</h2>
+          <p class="text-xs text-gray-400 italic mb-2">
+            Source: <a href="https://www.theguardian.com/world/2024/nov/25/polluted-rivers-taxes-ghana-illegal-gold-mining-boom" target="_blank" class="underline hover:text-teal-400">The Guardian (2024)</a>
+          </p>
+          <p class="text-gray-200 text-sm leading-relaxed">
+            Ghana loses over <strong>$2 billion annually</strong> due to galamsey — from lost tax revenue, destroyed farmland, and polluted rivers. The damage endangers both food security and water supply.
+          </p>
         </div>
-        <div>
-          <label for="password" class="block text-sm font-light text-gray-700">Password</label>
-          <input type="password" id="password" name="password" v-model="creds.password" placeholder="******" class="font-light text-gray-500 text-xs mt-1 pt-1 px-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300">
+
+        <!-- Card 2 -->
+        <div class="bg-white/10 hover:bg-white/20 p-6 rounded-2xl shadow-md transition duration-300 ease-in-out">
+          <h2 class="text-lg font-semibold text-yellow-300 mb-1">Gold Price Surge & Galamsey Boom</h2>
+          <p class="text-xs text-gray-400 italic mb-2">
+            Source: <a href="https://www.aljazeera.com/features/2025/1/22/as-gold-prices-surge-ghana-faces-looming-crisis-over-illegal-mining" target="_blank" class="underline hover:text-yellow-300">Al Jazeera (2025)</a>
+          </p>
+          <p class="text-gray-200 text-sm leading-relaxed">
+            As global gold prices soared in 2024, illegal mining operations in Ghana expanded rapidly — deepening environmental and economic vulnerabilities.
+          </p>
         </div>
-        <div>
-          <button type="submit" class="w-full bg-black text-white py-1 px-2 rounded-md hover:bg-gray-800  focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Sign In</button>
+
+        <!-- Card 3 -->
+        <div class="bg-white/10 hover:bg-white/20 p-6 rounded-2xl shadow-md transition duration-300 ease-in-out">
+          <h2 class="text-lg font-semibold text-sky-300 mb-1">Beyond Enforcement</h2>
+          <p class="text-xs text-gray-400 italic mb-2">
+            Source: <a href="https://www.modernghana.com/news/1440180/beyond-enforcement-tackling-galamsey-in-ghana.html" target="_blank" class="underline hover:text-sky-300">Modern Ghana (2025)</a>
+          </p>
+          <p class="text-gray-200 text-sm leading-relaxed">
+            Experts call for community-based mining cooperatives, blockchain tracking, and environmental bonds to ensure accountability and rehabilitation.
+          </p>
         </div>
-      </form>
-      <div class="mt-4 text-xs text-gray-600 text-center">
-        <p>Don't have an account? Please contact your administrator </p>
+
       </div>
     </div>
-  </div>
-</div>  
+
+    <!-- Right Pane -->
+    <div class="w-full lg:w-1/3 flex items-center justify-center bg-white text-gray-800 px-6 py-10 shadow-2xl">
+      <div class="w-full max-w-sm bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+        <h1 class="text-3xl font-semibold mb-6 text-center text-gray-900">Sign In</h1>
+
+        <form @submit.prevent="login" class="space-y-4">
+          <div>
+            <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+            <input
+              id="username"
+              v-model="creds.username"
+              type="text"
+              placeholder="e.g. johndoe"
+              class="w-full px-3 py-2 text-sm border rounded-md focus:ring-2 focus:ring-teal-500 focus:outline-none transition"
+            />
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+            <input
+              id="password"
+              v-model="creds.password"
+              type="password"
+              placeholder="••••••"
+              class="w-full px-3 py-2 text-sm border rounded-md focus:ring-2 focus:ring-teal-500 focus:outline-none transition"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-2 mt-4 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition font-medium"
+          >
+            Sign In
+          </button>
+        </form>
+
+        <p class="text-xs text-center text-gray-500 mt-4">
+          Don’t have an account? <br />
+          <span class="text-gray-700 font-medium">Contact your administrator</span>
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 <script>
