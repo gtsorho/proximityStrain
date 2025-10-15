@@ -1,0 +1,11 @@
+{
+  "type": "node",
+  "backend": {
+    "start": "node server.js",
+    "routes": ["/api/*"]
+  },
+  "frontend": {
+    "build": "vite build",
+    "path": "dist"
+  }
+}
