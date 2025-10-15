@@ -39,8 +39,7 @@
           Source: <a href="https://www.theguardian.com/world/2024/nov/25/polluted-rivers-taxes-ghana-illegal-gold-mining-boom" target="_blank" class="underline text-blue-700 hover:text-blue-900">The Guardian (2024)</a>
         </p>
         <p class="text-gray-800 leading-relaxed mb-4">
-          Ghana loses over US$2 billion annually due to galamsey—covering lost tax revenue, farmland destruction, and polluted rivers. 
-          The threat extends beyond economics, endangering food security and water supplies.
+          Ghana’s struggle with galamsey (illegal small-scale mining) is not only an environmental crisis but also a major economic and social threat. The country is estimated to lose over US$2 billion each year as a result of this activity — a figure that accounts for lost tax revenue, the destruction of arable farmland, and the pollution of critical water bodies that serve millions.
         </p>
         <a href="https://www.theguardian.com/world/2024/nov/25/polluted-rivers-taxes-ghana-illegal-gold-mining-boom" 
            target="_blank" 
