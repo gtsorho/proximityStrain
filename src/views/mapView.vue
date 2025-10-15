@@ -122,7 +122,7 @@ export default {
       console.log('New marker added at:', latlng);
     },
     lunchWebSocket() {
-        const WS = new WebSocket('ws://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me');
+        const WS = new WebSocket('wss://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me');
 
         console.log("Starting connection to WebSocket Server");
         WS.onopen = (event) => {
