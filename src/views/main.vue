@@ -33,7 +33,7 @@ import axios from 'axios'
   methods:{
 
     getClients() {
-      axios.get('http://localhost:3000/api/clients', { headers:{'Authorization': `Bearer ${this.token}`}})
+      axios.get('https://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me/api/clients', { headers:{'Authorization': `Bearer ${this.token}`}})
         .then((response) => {
           const clients = response.data;
           clients.forEach(client => {
@@ -50,7 +50,7 @@ import axios from 'axios'
         this.coordinates = data
       },
       lunchWebSocket() {
-         const WS = new WebSocket('ws://localhost:3000');
+         const WS = new WebSocket('ws://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me');
         console.log("Starting connection to WebSocket Server");
         WS.onopen = (event) => {
           console.log("Successfully connected to the echo WebSocket server...");

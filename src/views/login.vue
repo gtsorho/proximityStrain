@@ -139,7 +139,7 @@ export default {
   methods:{
         login(){
           
-            axios.post('http://localhost:3000/api/auth', this.creds,
+            axios.post('https://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me/api/auth', this.creds,
             )
             .then((response) => {
                 this.setCookie('token', response.data.token)

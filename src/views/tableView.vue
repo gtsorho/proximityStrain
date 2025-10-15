@@ -106,7 +106,7 @@ export default {
   },
   methods: {
     getClients() {
-      axios.get('http://localhost:3000/api/clients' , { headers:{'Authorization': `Bearer ${this.token}`}})
+      axios.get('https://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me/api/clients' , { headers:{'Authorization': `Bearer ${this.token}`}})
         .then((response) => {
           this.clients = response.data;
         })
@@ -116,7 +116,7 @@ export default {
     },
     getRecord(id) {
       this.showRecord = true
-      axios.get('http://localhost:3000/api/records/'+ id, { headers:{'Authorization': `Bearer ${this.token}`}})
+      axios.get('https://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me/api/records/'+ id, { headers:{'Authorization': `Bearer ${this.token}`}})
         .then((response) => {
           this.record = response.data;
         })
@@ -126,7 +126,7 @@ export default {
     },
     verifyRecord(id, clientId, verified) {
       if(!verified){
-        axios.post('http://localhost:3000/api/record/update/'+ id,{}, { headers:{'Authorization': `Bearer ${this.token}`}})
+        axios.post('https://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me/api/record/update/'+ id,{}, { headers:{'Authorization': `Bearer ${this.token}`}})
         .then((response) => {
           this.getRecord(clientId)
         })
@@ -148,7 +148,7 @@ export default {
       this.emitter.emit('editOrDelete', JSON.stringify(client));
     },
     lunchWebSocket() {
-        const WS = new WebSocket('ws://localhost:3000');
+        const WS = new WebSocket('ws://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me');
         console.log("Starting connection to WebSocket Server");
         
 
