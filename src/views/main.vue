@@ -50,7 +50,7 @@ import axios from 'axios'
         this.coordinates = data
       },
       lunchWebSocket() {
-         const WS = new WebSocket('ws://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me');
+         const WS = new WebSocket('wss://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me');
         console.log("Starting connection to WebSocket Server");
         WS.onopen = (event) => {
           console.log("Successfully connected to the echo WebSocket server...");
