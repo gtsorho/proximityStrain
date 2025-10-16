@@ -20,7 +20,7 @@ module.exports = {
         function validExtOfficer(client){
             const schema = Joi.object({
                 name:Joi.string().required(),
-                phone:Joi.string().required(),
+                phone:Joi.string().allow(null).optional(),
                 location: Joi.string().required(),
                 coordinates: Joi.string().required(),
                 remark: Joi.string().valid('HIGH', 'LOW','MID'),
@@ -34,7 +34,7 @@ module.exports = {
 
          client = {
             'name': req.body.name,
-            'phone': req.body.phone,
+            'phone': null,
             'location': req.body.location,
             'coordinates': req.body.coordinates,
             'userId':req.body.user
