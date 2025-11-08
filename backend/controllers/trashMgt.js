@@ -166,7 +166,7 @@ module.exports = {
         }
 
         await db.client.update(
-            { level: req.body.level, remark: level },
+            { level: req.body.level,  frequency: req.body.frequency , remark: level },
             {
                 where: { id: req.params.id },
             }
