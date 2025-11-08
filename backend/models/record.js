@@ -10,7 +10,12 @@ module.exports =  (sequelize, DataTypes ) => {
           type: DataTypes.FLOAT,
           allowNull: true,
           defaultValue:0
-        },     
+        }, 
+        frequency: {
+          type: DataTypes.FLOAT,
+          allowNull: true,
+          defaultValue:0
+        }
       })
 
       return record
