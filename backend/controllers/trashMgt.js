@@ -25,6 +25,7 @@ module.exports = {
                 coordinates: Joi.string().required(),
                 remark: Joi.string().valid('HIGH', 'LOW','MID'),
                 level: Joi.number().allow(null),
+                frequency:Joi.number().allow(null),
                 user:Joi.number().required()
             })
             return schema.validate(client)
@@ -41,7 +42,7 @@ module.exports = {
         }
 
         client = await db.client.create(client)
-        record = await db.record.create({ clientId:client.id, level:0,  isVerified: true });
+        record = await db.record.create({ clientId:client.id, level:0, frequency:0,  isVerified: true });
         res.send(client)
     }, 
     updateClient: async (req, res) => {
@@ -142,24 +143,24 @@ module.exports = {
             level = 'HIGH';
     
             if(req.body.level >= 80 && previousRecord.dataValues.level >= 80 ){
-                record = await db.record.update({ level:req.body.level }, {where:{id : previousRecord.dataValues.id}});
+                record = await db.record.update({ level:req.body.level, frequency:req.body.frequency }, {where:{id : previousRecord.dataValues.id}});
             }else{
-                record = await db.record.create({ clientId: req.params.id, level:req.body.level,  isVerified: true });
+                record = await db.record.create({ clientId: req.params.id, level:req.body.level, frequency:req.body.frequency,  isVerified: true });
                 module.exports.sendMessage(req.params.id)
             }
         } else if (req.body.level > 20 && req.body.level < 80) {
             level = 'MID';
             if( req.body.level > 20 && req.body.level < 80  &&   previousRecord.dataValues.level > 20 && previousRecord.dataValues.level < 80  ){
-                record = await db.record.update({ level:req.body.level }, {where:{id : previousRecord.dataValues.id}});
+                record = await db.record.update({ level:req.body.level, frequency:req.body.frequency }, {where:{id : previousRecord.dataValues.id}});
             }else{
-                record = await db.record.create({ clientId: req.params.id, level:req.body.level, isVerified: true });
+                record = await db.record.create({ clientId: req.params.id, level:req.body.level, frequency:req.body.frequency, isVerified: true });
             }
         } else {
             level = 'LOW';
             if(req.body.level <= 20 && previousRecord.dataValues.level <= 20 ){
-                record = await db.record.update({ level:req.body.level }, {where:{id : previousRecord.dataValues.id}});
+                record = await db.record.update({ level:req.body.level, frequency:req.body.frequency }, {where:{id : previousRecord.dataValues.id}});
             }else{
-                record = await db.record.create({ clientId: req.params.id, level:req.body.level });
+                record = await db.record.create({ clientId: req.params.id, level:req.body.level , frequency:req.body.frequency});
             }
 
         }
