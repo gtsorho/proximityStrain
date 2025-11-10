@@ -35,7 +35,7 @@ db.user.hasMany(db.client)
 
 // db.sensor = sensor(sequelize, DataTypes)
 
-sequelize.sync({alter:false, force:false})
+sequelize.sync({alter:true, force:false})
 .then(()=>{
     console.log('all data in sync')
 })

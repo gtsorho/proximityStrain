@@ -29,7 +29,7 @@ global.websocketServer.on('connection', (webSocketClient) => {
 // });
  
 
-app.get('/api/clients', authMiddleware, trashMgt.getClient);
+app.get('/api/clients', authMiddleware, trashMgt.getClients);
 app.post('/api/clients', upload.fields([]), authMiddleware, trashMgt.createClient);
 app.put('/api/clients/update/:id',upload.fields([]), authMiddleware, trashMgt.updateClient);
 app.delete('/api/delete/clients/:id', authMiddleware, trashMgt.deleteClient);

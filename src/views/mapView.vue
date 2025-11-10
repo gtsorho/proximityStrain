@@ -16,7 +16,7 @@ import L from "leaflet";
 import axios from "axios";
 
 export default {
-  emits: ["newMarker"],
+  emits: ["newMarker", "clientSelected"],
   props: {
     forceGet: Boolean,
   },
@@ -108,6 +108,7 @@ export default {
             marker.bindPopup(
               `<b>${client.name}</b><br>${client.level}% ${client.remark}`
             );
+            marker.on('click', () => this.$emit('clientSelected', client.id));
           });
         })
         .catch((err) => {
@@ -180,6 +181,7 @@ export default {
         marker.bindPopup(
           `<b>${newData.name}</b><br>${newData.level}% ${newData.remark}`
         );
+        marker.on('click', () => this.$emit('clientSelected', newData.id));
 
         // Store it for cleanup
         this.markers[newData.id] = marker;

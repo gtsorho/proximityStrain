@@ -22,6 +22,11 @@ module.exports =  (sequelize, DataTypes ) => {
           allowNull: true,
           defaultValue:0
         }, 
+        frequency: {
+          type: DataTypes.FLOAT,
+          allowNull: true,
+          defaultValue:0
+        },
         remark: {
           type: DataTypes.ENUM('HIGH', 'MID', 'LOW'),
           allowNull: true,

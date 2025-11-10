@@ -12,7 +12,7 @@ let ioInstance;
 
 module.exports = {
 
-    getClient: async(req, res)=>{
+    getClients: async(req, res)=>{
         let clients = await db.client.findAll({include: db.user})
         res.send(clients)
     },

@@ -26,7 +26,7 @@
         </thead>
 
         <tbody>
-          <tr class="hover:bg-gray-200 cursor-pointer" @click="getRecord(client.id)" v-for="(client, i) in clients" :key="i" >
+          <tr class="hover:bg-gray-200 cursor-pointer" @click="onclientClick(client.id)" @dblclick="onRowClick(client.id)" v-for="(client, i) in clients" :key="i" >
             <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">{{client.name}}</th>
             <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">{{ client.location }}</td>
             <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
@@ -34,7 +34,7 @@
               {{ client.level }}
             </td>
             <td class="border-t-0 px-6 align-middle  border-l-0 border-r-0 text-xs whitespace-nowrap p-4"><p class="px-5 py-1 text-center uppercase rounded-md w-32 "  :class="getThreshold(client.level)" > {{ client.remark }}</p></td>
-            <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4"> <button class="px-5 py-1 text-center border hover:bg-blue-950 hover:text-white border-blue-950 uppercase rounded-md w-32" @click="editOrDelete(client)"> <i class="fa-solid text-lg  fa-pen-nib"></i></button> </td>
+            <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4"> <button class="px-5 py-1 text-center border hover:bg-blue-950 hover:text-white border-blue-950 uppercase rounded-md w-32" @click.stop="editOrDelete(client)"> <i class="fa-solid text-lg  fa-pen-nib"></i></button> </td>
           </tr> 
         </tbody>
       </table>
@@ -75,7 +75,7 @@
 <script>
  import axios from 'axios'
 export default {
-  emits:['editOrDelete'],
+  emits:['editOrDelete','clientSelected'],
   props:{
     forceGet:Boolean
   },
@@ -105,6 +105,14 @@ export default {
     this.getClients();
   },
   methods: {
+    onRowClick(id){
+      this.getRecord(id)
+    },
+    
+    onclientClick(id){
+      this.$emit('clientSelected', id)
+    },
+
     getClients() {
       axios.get('https://proximitytest-proximitytestapp-zjuwao-73d29c-5-182-33-208.traefik.me/api/clients' , { headers:{'Authorization': `Bearer ${this.token}`}})
         .then((response) => {
